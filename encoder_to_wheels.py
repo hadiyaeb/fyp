@@ -8,11 +8,11 @@ rwheel = rospy.Publisher("/rwheel",Int64,queue_size=10)
 
 def encoder1(data):
     encoder1 = data.data
-    rwheel.publish(encoder1/200)
+    rwheel.publish(int(encoder1))
 
 def encoder2(data):
     encoder2 = data.data
-    lwheel.publish(encoder2/200)
+    lwheel.publish(int(encoder2))
 
 rospy.Subscriber("/encoder1",Int64,encoder1)
 rospy.Subscriber("/encoder2",Int64,encoder2)

@@ -10,7 +10,7 @@ def scan_callback(scan_msg):
         (0.0, 0.0, 0.0, 1.0),  # Rotation (quaternion)
         rospy.Time.now(),  # Timestamp
         'laser',  # Child frame
-        'odom'  # Parent frame
+        'base_link'  # Parent frame
     )
     #$scan_msg.ranges = [2.0, 2.1, 2.2, 2.3, 2.4, 2.5]
 
